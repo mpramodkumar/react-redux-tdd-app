@@ -1,0 +1,71 @@
+@import 'variables';
+@import 'mixins';
+
+.kpi-results__table {
+  border-collapse: collapse;
+  width: 100%;
+
+  td {
+    padding: 5px;
+
+    @include respond-to(tablet) {
+      padding: 10px;
+    }
+  }
+}
+
+.kpi-results__heading {
+  color: $light-gray-text;
+  font-family: $light;
+  padding: 0 5px;
+  text-transform: uppercase;
+  vertical-align: bottom;
+
+  @include respond-to(tablet) {
+    padding: 0 10px;
+  }
+}
+
+.kpi-results__heading-title {
+  padding: 0 0 0 5px;
+  text-align: left;
+
+  @include respond-to(tablet) {
+    padding: 0 0 0 10px;
+  }
+}
+
+.kpi-results__row {
+  color: $dark-gray;
+  font-family: $regular;
+}
+
+.kpi-results__previous {
+  width: 75px;
+
+  @include respond-to(tablet) {
+    width: 150px;
+  }
+}
+
+.kpi-results__latest {
+  width: 75px;
+
+  @include respond-to(tablet) {
+    width: 150px;
+  }
+}
+
+.kpi-results__delta {
+  color: $medium-gray;
+  width: 50px;
+}
+
+.gray-row {
+  background: $gray-row;
+  border-top: 1px solid $light-gray;
+}
+
+.kpi-results__right-aligned {
+  text-align: right;
+}

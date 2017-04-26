@@ -1,0 +1,46 @@
+@import 'mixins';
+@import 'variables';
+
+.kpi__results {
+  padding: 12px;
+
+  @include respond-to(tablet) {
+    padding: 28px;
+  }
+}
+
+.kpi__results-data {
+  margin: 80px 0 0;
+}
+
+.kpi__webhook-dialog-btn {
+  color: $orange;
+  cursor: pointer;
+  font-family: $bold;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.kpi__webhook-dialog {
+  @include respond-to(tablet) {
+    width: 700px !important;
+  }
+}
+
+.kpi__webhook-dialog > h2.md-title {
+  border-bottom: 1px solid $light-gray;
+  color: $dark-gray;
+  font-size: 24px;
+}
+
+.kpi__webhook-dialog-content {
+  max-height: calc(100vh - 200px);
+}
+
+.kpi__webhook-dialog {
+
+}
+
+.kpi__webhook-dialog-actions {
+  text-align: right;
+}

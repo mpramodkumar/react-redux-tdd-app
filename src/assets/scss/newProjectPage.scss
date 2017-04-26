@@ -1,0 +1,11 @@
+@import 'mixins';
+
+.new-project__title {
+  padding-left: 24px;
+}
+
+.new-project__form {
+  .md-text-field-container--input {
+    height: 80px;
+  }
+}

@@ -1,0 +1,66 @@
+@import 'variables';
+@import 'mixins';
+
+.user-list__user {
+  margin: 30px 8px;
+  text-align: center;
+
+  &:hover {
+    .user-list__remove-user {
+      opacity: 1;
+    }
+
+    .user-list__user-avatar {
+      &.md-avatar {
+        box-shadow: 0 3px 18px 3px rgba(0,0,0,0.21), 0 2px 5px 0 rgba(0,0,0,0.20);
+      }
+    }
+  }
+}
+
+
+.user-list__remove-user-container {
+  height: 0px;
+}
+
+.user-list__remove-user {
+  bottom: 30px;
+  left: 45px;
+  position: relative;
+
+  @include respond-to(tablet) {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  &.ipad {
+    opacity: 1;
+  }
+}
+
+.user-list__user-name {
+  color: $dark-gray;
+  font-family: $bold;
+  font-size: 16px;
+  word-wrap: break-word;
+}
+
+.user-list__user-location,
+.user-list__user-role {
+  color: $medium-gray;
+  font-size: 14px;
+}
+
+.user-list__user-avatar {
+  margin-bottom: 12px;
+
+  &.md-avatar {
+    transition: all 0.3s ease-in-out;
+  }
+
+  @include avatar($medium);
+
+  @include respond-to(tablet) {
+    @include avatar($large);
+  }
+}

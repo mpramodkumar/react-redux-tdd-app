@@ -1,0 +1,30 @@
+@import 'variables';
+@import 'mixins';
+
+.status-survey__results {
+  padding: 12px;
+
+  @include respond-to(tablet) {
+    padding: 28px;
+  }
+}
+
+.status-survey__new-link {
+  color: $orange;
+  font-family: $bold;
+  text-transform: uppercase;
+}
+
+.status-survey__completed {
+  color: $medium-gray;
+  font-family: $italic;
+
+  a {
+    @extend .status-survey__completed;
+    text-decoration: underline;
+  }
+}
+
+.status-survey__results-data {
+  margin: 80px 0 0;
+}

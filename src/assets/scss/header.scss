@@ -1,0 +1,170 @@
+@import 'variables';
+@import 'mixins';
+
+.header {
+  background: $dark-teal;
+  height: $navbar-height;
+  left: 0;
+  margin: auto;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9;
+}
+
+.header__toolbar {
+  margin: 0 12px;
+
+  &.md-toolbar--discrete {
+    height: $navbar-height;
+  }
+
+  &.md-toolbar {
+    .header__user-menu-button {
+      height: $navbar-height;
+      margin: 0;
+      min-width: 30px;
+      padding: 0;
+    }
+
+    .md-btn {
+      color: $light-gray-text;
+      font-family: $bold;
+      font-size: 12px;
+      height: $navbar-height;
+      letter-spacing: 0.6px;
+      line-height: 24px;
+      margin: 0;
+      min-width: initial;
+      text-transform: uppercase;
+
+      &.active {
+        color: $white;
+      }
+    }
+
+    .mobile-btn {
+      width: 24px;
+    }
+  }
+
+  .md-toolbar--action-right {
+    display: none;
+
+    @include respond-to(tablet) {
+      align-items: center;
+      display: flex;
+      height: $navbar-height;
+      margin-right: 0;
+    }
+  }
+
+  @include respond-to(tablet) {
+    max-width: 1200px;
+  }
+
+
+  @include respond-to(small-desktop) {
+    margin: 0 auto;
+  }
+}
+
+.header__toolbar-title {
+  align-items: center;
+  display: flex;
+  height: $navbar-height;
+
+  &.md-title--toolbar {
+    margin-left: 0;
+  }
+
+  .header__logo-container {
+    height: $navbar-height;
+  }
+
+  .header__logo-heart {
+    line-height: 0;
+
+    @include respond-to(tablet) {
+      display: none;
+    }
+
+    .md-icon {
+      color: $red;
+
+      &:hover {
+        animation: heartbeat 0.3s 2 linear;
+      }
+    }
+  }
+}
+
+.header__toolbar-logo {
+  padding: 7.5px 0;
+  display: none;
+
+  @include respond-to(tablet) {
+    display: inline-block;
+    height: $navbar-height;
+  }
+}
+
+.header__navigation-link {
+  display: none;
+
+  @include respond-to(tablet) {
+    &.md-btn--toolbar {
+      margin: 0 25px 0 0;
+    }
+  }
+}
+
+.header__user-menu {
+  height: $navbar-height;
+  margin-left: 16px;
+
+  &.md-btn--toolbar {
+    margin: 0;
+  }
+}
+
+.header__user-menu-button {
+  .md-icon {
+    vertical-align: middle;
+  }
+}
+
+.header__user-menu-list {
+  &.md-list {
+    background: $light-teal;
+    min-width: 150px;
+    padding: 0;
+    right: -12px;
+    text-align: right;
+  }
+
+  .md-tile-text--primary {
+    color: $white;
+    font-family: $regular;
+    font-size: 16px;
+  }
+
+  .md-tile-text--secondary {
+    color: $light-gray-text;
+    font-family: $regular;
+  }
+
+  .md-subheader {
+    height: $navbar-height;
+    line-height: 35px;
+    padding-right: 12px;
+  }
+
+  .md-list-tile--two-lines {
+    height: 48px;
+  }
+}
+
+.header__user-menu-avatar {
+  @include avatar($small);
+}

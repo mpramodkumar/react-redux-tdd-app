@@ -1,0 +1,112 @@
+@import '~react-md/src/scss/react-md';
+
+@import 'variables';
+@import 'mixins';
+
+$md-primary-color: $dark-teal;
+$md-secondary-color: $orange;
+$md-data-table-contextual-fallback-color: $dark-teal;
+$md-linear-progress-fallback-color: $orange;
+$md-switch-ball-fallback-color: $orange;
+$md-font-family: $light;
+
+@include react-md-everything;
+
+@include slider($orange);
+@include selection-control-group;
+
+html {
+  background-color: $almost-white;
+  min-width: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h2 {
+  &.md-text {
+    color: $light-gray-title;
+  }
+}
+
+h3 {
+  &.md-text {
+    color: $light-gray-title;
+  }
+}
+
+.app__container {
+  margin: 0 auto $page-margin;
+  position: absolute;
+  top: 40px;
+  width: 100%;
+}
+
+.page-container {
+  margin: $page-margin $page-margin 0;
+
+  @include respond-to(tablet) {
+    max-width: 1200px;
+  }
+
+  @include respond-to(small-desktop) {
+    margin: $page-margin auto 0;
+  }
+}
+
+.page-container__title {
+  color: $dark-gray;
+}
+
+.flash-messages {
+  animation: slide-down 0.5s ease;
+  font-family: $light;
+  position: fixed;
+  top: $navbar-height;
+  transition: top 500ms ease;
+  width: 100%;
+  z-index: 2;
+
+  &.error {
+    background-color: $red;
+  }
+
+  &.success {
+    background-color: $green;
+  }
+
+  &.remove {
+    animation: slide-up 0.5s ease;
+    top: 0;
+  }
+}
+
+.flash-messages__text {
+  color: $almost-white;
+  line-height: 24px;
+  padding: 5px 0;
+  text-align: center;
+}
+
+.form-actions {
+  text-align: right;
+
+  @include respond-to(tablet) {
+    margin-top: 24px;
+
+    .md-btn {
+      margin-left: 17px;
+    }
+  }
+}
+
+.md-btn--flat {
+  font-family: $regular;
+  letter-spacing: 0.65px;
+}

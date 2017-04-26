@@ -1,0 +1,44 @@
+@import 'variables';
+
+/* for loading animation */
+@keyframes bounce {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+@-webkit-keyframes bounce {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+/* for header icon */
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  25% { transform: scale(0.95); }
+  50% { transform: scale(1.1); }
+  75% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* for flash message animation */
+@keyframes slide-down {
+  0% { top: 0; }
+  100% { top: $navbar-height; }
+}
+
+@-webkit-keyframes slide-down {
+  0% { top: 0; }
+  100% { top: $navbar-height; }
+}
+
+@keyframes slide-up {
+  0% { top: $navbar-height; }
+  100% { top: 0; }
+}
+
+@-webkit-keyframes slide-up {
+  0% { top: $navbar-height; }
+  100% { top: 0; }
+}

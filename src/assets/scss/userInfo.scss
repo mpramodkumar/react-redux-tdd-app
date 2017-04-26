@@ -1,0 +1,28 @@
+@import 'variables';
+
+.user-info {
+  text-align: center;
+}
+
+.user-info__name {
+  color: $dark-gray;
+  font-family: $bold;
+  font-size: 18px;
+  margin-top: 10px;
+  word-wrap: break-word;
+}
+
+.user-info__title-location {
+  font-size: 14px;
+}
+
+.user-info__billable {
+  font-size: 14px;
+}
+
+.user-info__admin {
+  color: $light-gray-text;
+  font-weight: bold;
+  font-size: 10px;
+  text-transform: uppercase;
+}

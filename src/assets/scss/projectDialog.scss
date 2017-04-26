@@ -1,0 +1,46 @@
+@import 'mixins';
+@import 'variables';
+
+.project-page__assignment-dialog,
+.project-page__delete-dialog,
+.project-page__archive-dialog {
+  .md-title--dialog {
+    border-bottom: 1px solid $light-gray;
+    color: $dark-gray;
+    font-size: 22px;
+    padding-bottom: 6px;
+    text-align: center;
+  }
+
+  .md-dialog {
+    @include respond-to(tablet) {
+      width: 370px;
+    }
+  }
+
+  .dialog-buttons {
+    margin-top: 24px;
+    text-align: right;
+
+    .md-btn {
+      margin-left: 17px;
+    }
+  }
+
+  .dialog-content {
+    padding: 24px;
+  }
+}
+
+#deleteDialogTitle {
+  font-size: 18px;
+}
+
+.assignment-dialog__role,
+.assignment-dialog__name {
+  width: 100%;
+}
+
+.assignment-dialog__content {
+  overflow: initial;
+}

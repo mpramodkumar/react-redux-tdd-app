@@ -1,0 +1,28 @@
+@import 'variables';
+@import 'mixins';
+
+.users__title {
+  display: none;
+
+  @include respond-to(tablet) {
+    display: flex;
+    border-bottom: 1.5px solid $light-gray;
+  }
+}
+
+.users__add-icon-container {
+  display: flex;
+  border-bottom: 1.5px solid $light-gray;
+
+  @include respond-to(tablet) {
+    display: none;
+  }
+}
+
+.users__users-wrapper {
+  padding: 20px;
+
+  @include respond-to(tablet) {
+    padding: 40px;
+  }
+}

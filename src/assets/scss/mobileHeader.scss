@@ -1,0 +1,151 @@
+@import "variables";
+@import "mixins";
+
+.mobile-header__content {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  @include respond-to(tablet) {
+    display: none;
+  }
+}
+
+.mobile-header__title-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.mobile-header__title {
+  color: $light-gray;
+  font-size: 18px;
+  line-height: 1.5;
+  text-transform: capitalize;
+}
+
+.mobile-header__dropdown {
+  display: inline-block;
+  .mobile-header__dropdown-list {
+    background: $light-teal;
+    bottom: 0;
+    left: 0;
+    opacity: 1;
+    overflow-y: auto;
+    padding: 24px 0 0;
+    position: fixed;
+    right: 0;
+    text-decoration: none;
+    top: 40px;
+    transition: transform 200ms ease, opacity 200ms ease;
+    &.hidden {
+      opacity: 0;
+      transition: transform 400ms ease, opacity 200ms ease;
+      transform: translateY(-120vh);
+    }
+  }
+}
+
+.mobile-header__dropdown-button {
+  vertical-align: bottom;
+}
+
+.mobile-header__dropdown-list-item {
+  border-bottom: solid 1px $dark-teal;
+  text-align: left;
+  .md-text {
+    color: rgba($white, 0.8);
+    font-family: 'Interstate Bd';
+    padding-left: 24px;
+  }
+  &.active {
+    background: rgba($dark-teal, 0.4);
+    .md-text {
+      color: $white;
+    }
+  }
+}
+
+.mobile-header__menu-button {
+  &.md-btn--icon {
+    padding: 8px 0;
+  }
+
+  &.drawer-icon {
+    color: $light-gray;
+    float: right;
+    top: -2px;
+  }
+
+  @include respond-to(tablet) {
+    display: none;
+  }
+}
+
+.mobile-header__drawer {
+  &.md-drawer {
+    width: 250px;
+  }
+}
+
+.mobile-header__drawer-container {
+  background-color: $light-teal;
+  height: 100%;
+  width: 100%;
+}
+
+.mobile-header__drawer-menu {
+  border-bottom: 0.5px solid $dark-teal;
+  padding: 48px 0 15px;
+  text-align: center;
+
+  span {
+    color: $white;
+    display: block;
+  }
+
+  a {
+    color: $light-gray;
+  }
+}
+
+.mobile-header__drawer-avatar {
+  margin-bottom: 5px;
+
+  @include avatar($large);
+}
+
+.mobile-header__drawer-user-name {
+  font-size: 18px;
+}
+
+.mobile-header__drawer-logout {
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+
+.mobile-header__drawer-menu-links {
+  margin-top: 0;
+  padding-left: 0;
+
+  a {
+    color: $light-gray;
+    letter-spacing: 0.6px;
+  }
+}
+
+.mobile-header__drawer-menu-link {
+  border-bottom: 0.5px solid $dark-teal;
+  display: block;
+  padding: 12px 0 12px 12px;
+  text-transform: uppercase;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  a.active {
+    color: $white;
+  }
+}

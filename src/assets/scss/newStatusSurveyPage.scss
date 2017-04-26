@@ -1,0 +1,41 @@
+@import 'variables';
+@import 'mixins';
+
+.project-survey__body {
+  color: $dark-gray;
+  padding: 24px 24px 48px;
+  text-align: center;
+
+  @include respond-to(small-desktop) {
+    padding: 24px 48px 48px;
+  }
+}
+
+.project-survey__form {
+  @include respond-to(small-desktop) {
+    margin: auto;
+    max-width: 800px;
+  }
+}
+
+.project-survey__label {
+  font-family: $bold;
+  font-size: 18px;
+  margin: 24px 0 12px;
+  @include respond-to(small-desktop) {
+    margin: 48px 0 12px;
+  }
+}
+
+.unknown-effort__checkbox {
+  display: inline-flex !important;
+}
+
+button {
+  &.project-survey__submit-button {
+    font-size: 14px;
+    height: 36px;
+    margin: 48px auto;
+    width: 108px;
+  }
+}

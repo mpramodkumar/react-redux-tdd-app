@@ -1,0 +1,100 @@
+//====================Admin=====================================================
+export const FETCH_USERS__FAILURE = 'FETCH_USERS__FAILURE';
+export const FETCH_USERS__REQUEST = 'FETCH_USERS__REQUEST';
+export const FETCH_USERS__SUCCESS = 'FETCH_USERS__SUCCESS';
+
+//====================CurrentUser===============================================
+export const CURRENT_USER__FAILURE = 'CURRENT_USER__FAILURE';
+export const CURRENT_USER__REQUEST = 'CURRENT_USER__REQUEST';
+export const CURRENT_USER__SUCCESS = 'CURRENT_USER__SUCCESS';
+
+//====================ClientSurvey==============================================
+export const CREATE_CLIENT_SURVEY__FAILURE = 'CREATE_CLIENT_SURVEY__FAILURE';
+export const CREATE_CLIENT_SURVEY__REQUEST = 'CREATE_CLIENT_SURVEY__REQUEST';
+export const CREATE_CLIENT_SURVEY__SUCCESS = 'CREATE_CLIENT_SURVEY__SUCCESS';
+export const FETCH_CLIENT_SURVEY_PROJECT__FAILURE = 'FETCH_CLIENT_SURVEY_PROJECT__FAILURE';
+export const FETCH_CLIENT_SURVEY_PROJECT__REQUEST = 'FETCH_CLIENT_SURVEY_PROJECT__REQUEST';
+export const FETCH_CLIENT_SURVEY_PROJECT__SUCCESS = 'FETCH_CLIENT_SURVEY_PROJECT__SUCCESS';
+
+//====================FlashMessages=============================================
+export const FLASH_MESSAGE__CREATE = 'FLASH_MESSAGE__CREATE';
+export const FLASH_MESSAGE__DELETE = 'FLASH_MESSAGE__DELETE';
+
+//====================KPI=======================================================
+export const FETCH_KPI__FAILURE = 'FETCH_KPI__FAILURE';
+export const FETCH_KPI__REQUEST = 'FETCH_KPI__REQUEST';
+export const FETCH_KPI__SUCCESS = 'FETCH_KPI__SUCCESS';
+
+//====================Login=====================================================
+export const AUTH__FAILURE = 'AUTH__FAILURE';
+export const AUTH__REQUEST = 'AUTH__REQUEST';
+export const AUTH__SUCCESS = 'AUTH__SUCCESS';
+
+//====================Locations=================================================
+export const FETCH_LOCATIONS__FAILURE = 'FETCH_LOCATIONS__FAILURE';
+export const FETCH_LOCATIONS__REQUEST = 'FETCH_LOCATIONS__REQUEST';
+export const FETCH_LOCATIONS__SUCCESS = 'FETCH_LOCATIONS__SUCCESS';
+
+//====================Logout====================================================
+export const LOGOUT__FAILURE = 'LOGOUT__FAILURE';
+export const LOGOUT__REQUEST = 'LOGOUT__REQUEST';
+export const LOGOUT__SUCCESS = 'LOGOUT__SUCCESS';
+
+//====================Project===================================================
+export const CREATE_PROJECT__FAILURE = 'CREATE_PROJECT__FAILURE';
+export const CREATE_PROJECT__REQUEST = 'CREATE_PROJECT__REQUEST';
+export const CREATE_PROJECT__SUCCESS = 'CREATE_PROJECT__SUCCESS';
+
+export const FETCH_PROJECTS__FAILURE = 'FETCH_PROJECTS__FAILURE';
+export const FETCH_PROJECTS__REQUEST = 'FETCH_PROJECTS__REQUEST';
+export const FETCH_PROJECTS__SUCCESS = 'FETCH_PROJECTS__SUCCESS';
+
+export const FETCH_PROJECT__FAILURE = 'FETCH_PROJECT__FAILURE';
+export const FETCH_PROJECT__REQUEST = 'FETCH_PROJECT__REQUEST';
+export const FETCH_PROJECT__SUCCESS = 'FETCH_PROJECT__SUCCESS';
+
+export const UPDATE_PROJECT__FAILURE = 'UPDATE_PROJECT__FAILURE';
+export const UPDATE_PROJECT__REQUEST = 'UPDATE_PROJECT__REQUEST';
+export const UPDATE_PROJECT__SUCCESS = 'UPDATE_PROJECT__SUCCESS';
+
+//====================ProjectAssignment===================================================
+export const CREATE_PROJECT_ASSIGNMENT__FAILURE = 'CREATE_PROJECT_ASSIGNMENT__FAILURE';
+export const CREATE_PROJECT_ASSIGNMENT__REQUEST = 'CREATE_PROJECT_ASSIGNMENT__REQUEST';
+export const CREATE_PROJECT_ASSIGNMENT__SUCCESS = 'CREATE_PROJECT_ASSIGNMENT__SUCCESS';
+
+export const DELETE_PROJECT_ASSIGNMENT__FAILURE = 'DELETE_PROJECT_ASSIGNMENT__FAILURE';
+export const DELETE_PROJECT_ASSIGNMENT__REQUEST = 'DELETE_PROJECT_ASSIGNMENT__REQUEST';
+export const DELETE_PROJECT_ASSIGNMENT__SUCCESS = 'DELETE_PROJECT_ASSIGNMENT__SUCCESS';
+
+//====================ProcessSurveys============================================
+export const CREATE_PROCESS_SURVEY__FAILURE = 'CREATE_PROCESS_SURVEY__FAILURE';
+export const CREATE_PROCESS_SURVEY__REQUEST = 'CREATE_PROCESS_SURVEY__REQUEST';
+export const CREATE_PROCESS_SURVEY__SUCCESS = 'CREATE_PROCESS_SURVEY__SUCCESS';
+
+export const FETCH_PROCESS_SURVEY__FAILURE = 'FETCH_PROCESS_SURVEY__FAILURE';
+export const FETCH_PROCESS_SURVEY__REQUEST = 'FETCH_PROCESS_SURVEY__REQUEST';
+export const FETCH_PROCESS_SURVEY__SUCCESS = 'FETCH_PROCESS_SURVEY__SUCCESS';
+
+export const ANSWER_PROCESS_SURVEY_QUESTION__SUCCESS = 'ANSWER_PROCESS_SURVEY_QUESTION__SUCCESS';
+
+//====================StatusSurvey===================================================
+export const CREATE_STATUS_SURVEY__FAILURE = 'CREATE_STATUS_SURVEY__FAILURE';
+export const CREATE_STATUS_SURVEY__REQUEST = 'CREATE_STATUS_SURVEY__REQUEST';
+export const CREATE_STATUS_SURVEY__SUCCESS = 'CREATE_STATUS_SURVEY__SUCCESS';
+
+//====================User======================================================
+export const FETCH_USER__FAILURE = 'FETCH_USER__FAILURE';
+export const FETCH_USER__REQUEST = 'FETCH_USER__REQUEST';
+export const FETCH_USER__SUCCESS = 'FETCH_USER__SUCCESS';
+
+export const CREATE_USER__FAILURE = 'CREATE_USER__FAILURE';
+export const CREATE_USER__REQUEST = 'CREATE_USER__REQUEST';
+export const CREATE_USER__SUCCESS = 'CREATE_USER__SUCCESS';
+
+export const USER_PASSWORD_UPDATE__FAILURE = 'USER_PASSWORD_UPDATE__FAILURE';
+export const USER_PASSWORD_UPDATE__REQUEST = 'USER_PASSWORD_UPDATE__REQUEST';
+export const USER_PASSWORD_UPDATE__SUCCESS = 'USER_PASSWORD_UPDATE__SUCCESS';
+
+export const USER_SETTINGS_UPDATE__FAILURE = 'USER_SETTINGS_UPDATE__FAILURE';
+export const USER_SETTINGS_UPDATE__REQUEST = 'USER_SETTINGS_UPDATE__REQUEST';
+export const USER_SETTINGS_UPDATE__SUCCESS = 'USER_SETTINGS_UPDATE__SUCCESS';

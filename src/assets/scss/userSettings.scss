@@ -1,0 +1,36 @@
+@import 'variables';
+@import 'mixins';
+
+.user-settings__dialog {
+  @include respond-to(tablet) {
+    width: 700px !important;
+  }
+}
+
+.user-settings__dialog > h2.md-title {
+  border-bottom: 1px solid $light-gray;
+  color: $dark-gray;
+  font-size: 24px;
+  padding-left: 54px;
+}
+
+.user-settings__dialog-content {
+  max-height: calc(100vh - 200px);
+
+  @include respond-to(tablet) {
+    padding: 40px;
+  }
+}
+
+.user-settings__form-options {
+  .md-text-field-container--input {
+    height: 80px;
+  }
+}
+
+.user-settings__billable,
+.user-settings__admin-rights {
+  &.md-cell {
+    margin-top: 0;
+  }
+}

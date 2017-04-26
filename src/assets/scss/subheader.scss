@@ -1,0 +1,125 @@
+@import 'mixins';
+@import 'variables';
+
+.subheader__wrapper {
+  padding: 12px;
+
+  &.red {
+    border-bottom: 5px solid $red;
+  }
+
+  &.yellow {
+    border-bottom: 5px solid $yellow;
+  }
+
+  &.green {
+    border-bottom: 5px solid $green;
+  }
+}
+
+.subheader {
+  display: flex;
+  justify-content: space-between;
+
+  @include respond-to(tablet) {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+.subheader__title {
+  &.md-card-title {
+    display: none;
+
+    @include respond-to(tablet) {
+      display: inherit;
+      padding-left: 25px;
+    }
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-size: 16px;
+    white-space: normal;
+  }
+}
+
+.subheader__mobile-title {
+  margin: 0;
+  padding: 0 12px;
+  white-space: normal;
+
+  &:last-child {
+    padding: 0;
+  }
+
+  h2 {
+    margin: 0;
+  }
+
+  h3 {
+    font-size: 12px;
+    line-height: initial;
+    margin: 0;
+  }
+
+  @include respond-to(tablet) {
+    display: none;
+  }
+}
+
+.subheader__actions {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @include respond-to(tablet) {
+    justify-content: initial;
+  }
+}
+
+.subheader__actions__top-row {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+}
+
+.subheader__project-nav-arrows {
+  display: none;
+
+  @include respond-to(tablet) {
+    cursor: pointer;
+    display: inherit;
+  }
+}
+
+.subheader__project-nav-btn {
+  &.md-btn--icon {
+    height: 30px;
+    padding: 2px;
+    width: 30px;
+  }
+}
+
+.subheader__project-archived {
+  display: none;
+
+  @include respond-to(tablet) {
+    color: $light-gray-text;
+    display: inherit;
+    font-size: 18px;
+    margin: 10px 14px 0;
+  }
+}
+
+.project-admin-menu {
+  &.md-btn--icon {
+    height: 30px;
+    padding: 2px;
+    width: 30px;
+  }
+}

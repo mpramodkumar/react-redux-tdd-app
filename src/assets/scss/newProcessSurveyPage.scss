@@ -1,0 +1,57 @@
+@import 'variables';
+@import 'mixins';
+
+.new-process-survey__category-title {
+  color: $dark-gray;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.survey__footer {
+  border-top: 1px solid $light-gray;
+  height: 70px;
+  padding: 12px;
+}
+
+.new-process-survey__category {
+  margin: $page-margin 0 0;
+}
+
+.new-process-survey__header {
+  border-bottom: 1px solid $light-gray;
+  padding: 30px 12px 12px;
+}
+
+.new-process-survey__category-questions {
+  text-align: center;
+  padding: 48px 24px;
+}
+
+.new-process-survey__category-entry {
+  margin-bottom: 24px;
+
+  &:last-child {
+    margin-bottom: 0px;
+  }
+}
+
+.new-process-survey__question {
+  color: $dark-gray;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.survey__button {
+  background-color: $orange;
+  color: $white;
+  font-family: $regular;
+  font-size: 14px;
+  height: 36px;
+  width: 108px;
+}
+
+.progress-bar {
+  border-bottom: 3px solid $green;
+  opacity: 0.75;
+}

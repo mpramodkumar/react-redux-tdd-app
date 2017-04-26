@@ -1,0 +1,51 @@
+@import 'variables';
+@import 'mixins';
+
+.survey-results__table {
+  border-collapse: collapse;
+  width: 100%;
+
+  td {
+    padding: 5px;
+
+    @include respond-to(tablet) {
+      padding: 10px;
+    }
+  }
+
+  .survey-results__question,
+  .survey-results__answer {
+    @include respond-to(tablet) {
+      width: 50%;
+    }
+  }
+
+  .survey-results__question {
+    font-weight: bold;
+
+    @include respond-to(tablet) {
+      font-weight: normal;
+    };
+  }
+}
+
+.survey-results__row {
+  display: flex;
+  flex-direction: column;
+  padding: 6px 0;
+
+  @include respond-to(tablet) {
+    flex-direction: row;
+  }
+}
+
+.gray-row {
+  background: $gray-row;
+  border-top: 1px solid $light-gray;
+}
+
+.survey-results__right-aligned {
+  @include respond-to(tablet) {
+    text-align: right;
+  }
+}

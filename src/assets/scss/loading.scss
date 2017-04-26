@@ -1,0 +1,33 @@
+/*@import 'variables';
+@import 'animations';
+
+.loading-dots__container {
+  display: flex;
+  height: 120px;
+  width: 100%;
+}
+
+.loading-dots {
+  padding: 10px 0 0;
+  margin: auto;
+}
+
+.loading-dot {
+  animation: bounce 999ms infinite linear;
+  border-radius: 50%;
+  display: inline-block;
+  height: 8px;
+  margin: 10px 2px;
+  width: 8px;
+  &.red {
+    background-color: $red;
+  }
+  &.yellow {
+    animation-delay: 333ms;
+    background-color: $yellow;
+  }
+  &.green {
+    animation-delay: 666ms;
+    background-color: $green;
+  }
+}*/

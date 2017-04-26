@@ -1,0 +1,85 @@
+$screen-size-mobile: '480px';
+$screen-size-tablet: '768px';
+$screen-size-small-desktop: '1280px';
+$screen-size-desktop: '1440px';
+
+@mixin respond-to($media) {
+  @if $media == mobile {
+    @media (min-width: $screen-size-mobile) { @content; }
+  } @else if $media == tablet {
+    @media (min-width: $screen-size-tablet) { @content; }
+  } @else if $media == small-desktop {
+    @media (min-width: $screen-size-small-desktop) { @content; }
+  } @else if $media == desktop {
+    @media (min-width: $screen-size-desktop) { @content; }
+  }
+}
+
+@mixin avatar($size) {
+  @if $size == 'small' {
+    &.md-avatar {
+      border: none;
+      box-shadow: $standard-box-shadow;
+      height: 30px;
+      width: 30px;
+    }
+    &.md-avatar--default {
+      background: $white;
+    }
+  } @else if $size == 'medium' {
+    &.md-avatar {
+      border: none;
+      box-shadow: $standard-box-shadow;
+      height: 60px;
+      width: 60px;
+    }
+    &.md-avatar--default {
+      background: $white;
+    }
+  } @else if $size == 'large' {
+    &.md-avatar {
+      border: none;
+      box-shadow: $standard-box-shadow;
+      height: 84px;
+      width: 84px;
+    }
+    &.md-avatar--default {
+      background: $white;
+    }
+  } @else if $size == 'xl' {
+    &.md-avatar {
+      border: none;
+      box-shadow: $standard-box-shadow;
+      height: 120px;
+      width: 120px;
+    }
+    &.md-avatar--default {
+      background: $white;
+    }
+  }
+}
+
+@mixin slider($color) {
+  .md-slider-track-fill {
+    background: $color;
+  }
+
+  .md-slider-thumb--on {
+    background: $color;
+  }
+}
+
+// for multiple radio-button, checkboxes, etc.
+// we want them to diplay inline for views tablet and up,
+// and display in a column for mobile
+@mixin selection-control-group {
+  .md-selection-control-group {
+    display: inline;
+    .md-selection-control-container {
+      display: inline-grid;
+      @include respond-to(tablet) {
+        display: inline-flex;
+      }
+    }
+  }
+}

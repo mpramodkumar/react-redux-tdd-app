@@ -1,0 +1,52 @@
+.content {
+  margin: 36px auto;
+  position: relative;
+}
+
+.stoplight {
+  background-image: url('../images/stoplight.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 180px;
+  margin: auto;
+  position: relative;
+  width: 105px;
+}
+
+.stoplight__bulb {
+  background-image: url('../images/lightbulb.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 50%;
+  cursor: pointer;
+  display: block;
+  height: 41px;
+  left: 1px;
+  margin: auto;
+  position: relative;
+  transition: background-image 0.1s ease;
+  width: 41px;
+
+  &.red {
+    top: 18px;
+    &.active, &:hover {
+      background-image: url('../images/lightbulb-red.svg');
+    }
+  }
+
+  &.yellow {
+    top: 29px;
+    &.active, &:hover {
+      background-image: url('../images/lightbulb-yellow.svg');
+    }
+  }
+
+  &.green {
+    top: 37px;
+    &.active, &:hover {
+      background-image: url('../images/lightbulb-green.svg');
+    }
+  }
+}

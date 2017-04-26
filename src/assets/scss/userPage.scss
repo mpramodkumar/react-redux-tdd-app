@@ -1,0 +1,45 @@
+@import 'variables';
+@import 'mixins';
+
+.user__heading-content {
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 10px;
+}
+
+.user__avatar-container {
+  text-align: center;
+}
+
+.user-settings__settings-icon {
+  bottom: 118px;
+  left: 50px;
+  position: relative;
+
+  @include respond-to(tablet) {
+    bottom: 145px;
+    left: 65px;
+  }
+
+  &.md-btn--icon {
+    color: $medium-gray;
+  }
+}
+
+.user__settings {
+  height: 0px;
+}
+
+.user__avatar {
+  @include avatar($large);
+
+  @include respond-to(tablet) {
+    @include avatar($xl);
+  }
+}
+
+.user__resourcing {
+  margin: 0 0 20px;
+}

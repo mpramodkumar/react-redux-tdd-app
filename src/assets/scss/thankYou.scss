@@ -1,0 +1,16 @@
+@import 'mixins';
+
+.thank-you {
+  display: flex;
+  flex-direction: column;
+}
+
+.thank-you__gif {
+  align-self: center;
+  margin: 0 0 90px;
+  width: 350px;
+
+  @include respond-to(tablet) {
+    width: 600px;
+  }
+}

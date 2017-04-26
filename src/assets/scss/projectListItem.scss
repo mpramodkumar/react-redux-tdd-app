@@ -1,0 +1,133 @@
+@import 'variables';
+@import 'mixins';
+
+.project-list-item {
+  align-items: center;
+  border-top: 1.5px solid $light-gray;
+  display: flex;
+  height: 60px;
+
+  &:hover {
+    background-color: $light-gray;
+  }
+
+  &:last-child {
+    border-radius: 0 0 4px 4px;
+  }
+
+  @include respond-to(tablet) {
+    line-height: 60px;
+  }
+
+  &:last-child .project-list-item__status {
+    border-radius: 0 0 0 2px;
+  }
+}
+
+.project-list-item__status {
+  height: 100%;
+  width: 10px;
+
+  &.red {
+    background-color: $red;
+  }
+
+  &.yellow {
+    background-color: $yellow;
+  }
+
+  &.green {
+    background-color: $green;
+  }
+
+  &.gray {
+    background-color: $dark-gray;
+  }
+}
+
+.project-list-item__content {
+  display: flex;
+  flex: 1 100%;
+  margin: 0 15px 0 15px;
+
+  @include respond-to(tablet) {
+    margin: 0 15px 0 25px;
+  }
+}
+
+.project-list-item__content-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.project-list-item__details {
+  flex-grow: 1;
+}
+
+.project-list-item__actions {
+  text-align: right;
+}
+
+.project-list-item__name {
+  font-size: 14px;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 250px;
+
+  @include respond-to(tablet) {
+    font-size: 20px;
+    width: 450px;
+  }
+}
+
+.project-list-item__update-menu-container {
+  display: none;
+
+  @include respond-to(tablet) {
+    display: initial;
+  }
+
+  &.mobile {
+    display: initial;
+
+    @include respond-to(tablet) {
+      display: none;
+    }
+  }
+}
+
+.project-list-item__update-menu {
+  font-size: 14px;
+  text-transform: uppercase;
+
+  &.md-btn--text {
+    height: 18px;
+    margin: 0;
+    min-width: initial;
+    padding: 0;
+  }
+}
+
+.project-list-item__timestamp {
+  color: $light-gray-text;
+  display: none;
+  font-family: $italic;
+  font-size: 10px;
+
+  &.mobile {
+    display: initial;
+
+    @include respond-to(tablet) {
+      display: none;
+    }
+  }
+
+  @include respond-to(tablet) {
+    display: initial;
+    font-size: 12px;
+    text-align: right;
+  }
+}

@@ -1,0 +1,167 @@
+@import 'mixins';
+@import 'variables';
+
+.project-widget {
+  color: $dark-gray;
+  margin-top: 12px;
+  padding: 12px;
+}
+
+.project-widget__content {
+  align-items: stretch;
+  display: flex;
+  justify-content: center;
+
+  h1 {
+    margin: 0;
+  }
+}
+
+.project-widget__title {
+  text-transform: uppercase;
+
+  h2 {
+    color: $medium-gray;
+    font-family: $bold;
+    font-size: 20px;
+
+    a {
+      font-family: $bold;
+      font-size: 20px;
+    }
+
+    i {
+      color: inherit;
+      font-size: 18px;
+      font-weight: bold;
+      position: relative;
+      top: 2px;
+    }
+  }
+}
+
+.project-widget__subtitle {
+  padding: 0 16px 12px;
+  color: $medium-gray;
+  font-family: $italic;
+  text-transform: capitalize;
+}
+
+.project-status__data {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+
+  h1 {
+    margin: 0;
+  }
+}
+
+.project-status__data-container {
+  border-right: 2px solid $light-gray;
+  flex-grow: 1;
+  padding: 0 6px;
+  text-align: center;
+
+  &:nth-child(2) {
+    border-right: none;
+  }
+
+  &:last-child {
+    display: none;
+  }
+
+  @include respond-to(tablet) {
+    padding: 0;
+
+    &:nth-child(2) {
+      border-right: 2px solid $light-gray;
+    }
+
+    &:last-child {
+      border: none;
+      display: block;
+    }
+  }
+}
+
+.project-status__category {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.project-status__category-result {
+  color: $dark-gray;
+  font-family: $bold;
+  font-size: 29px;
+  text-align: center;
+}
+
+.nps-result {
+  &.green {
+    color: $green;
+  }
+
+  &.gray {
+    color: $dark-gray;
+  }
+
+  &.red {
+    color: $red;
+  }
+
+  &.yellow {
+    color: $yellow;
+  }
+}
+
+.project-kpi {
+  border-right: 2px solid $light-gray;
+  flex-grow: 1;
+  text-align: center;
+  padding: 0 10px;
+
+  &:nth-child(3) {
+    border-right: none;
+  }
+  &:nth-child(4) {
+    border-right: none;
+    display: none;
+  }
+  &:last-child {
+    border-right: none;
+    display: none;
+  }
+
+  @include respond-to(tablet) {
+    min-width: 130px;
+    padding: 0 20px;
+
+    &:nth-child(3) {
+      border-right: 2px solid $light-gray;
+    }
+    &:nth-child(4) {
+      border-right: 2px solid $light-gray;
+      display: inline;
+    }
+    &:last-child {
+      border-right: none;
+      display: inline;
+    }
+  }
+}
+
+.project-kpi__value {
+  font-family: $bold;
+  color: $dark-gray;
+  font-family: $bold;
+  font-size: 29px;
+
+  @include respond-to(tablet) {
+    font-size: 32px;
+  }
+}
+
+.project-kpi__text {
+  text-transform: uppercase;
+}

@@ -1,0 +1,73 @@
+@import 'mixins';
+@import 'variables';
+
+.edit-project__title {
+  padding-left: 24px;
+}
+
+.edit-project__form-github-title {
+  color: $medium-gray;
+  margin-top: 60px;
+  text-transform: uppercase;
+}
+
+.edit-project__form-github-container {
+  margin-top: 60px;
+
+  &:nth-child(2) {
+    margin-top: 12px;
+  }
+
+  @include respond-to(tablet) {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+  }
+}
+
+.edit-project__form-github-input {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+.edit-project__form-github-delete-button-desktop {
+  display: none;
+
+  @include respond-to(tablet) {
+    top: 15px;
+    display: inline-block;
+  }
+}
+
+.edit-project__form-github-delete-mobile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 25px;
+  font-size: 16px;
+
+  @include respond-to(tablet) {
+    display: none;
+  }
+}
+
+.edit-project__form-github-delete-button-mobile {
+  color: $medium-gray;
+  float: right;
+}
+
+.edit-project__form-github-heading-mobile {
+  color: $medium-gray;
+  text-transform: uppercase;
+}
+
+.edit-project__form-add-repo-container {
+  margin: 25px 8px;
+}
+
+.edit-project__form-add-repo {
+  color: $orange;
+  cursor: pointer;
+  font-family: $bold;
+  text-transform: uppercase;
+}

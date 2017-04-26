@@ -1,0 +1,17 @@
+@import 'mixins';
+
+.project-team__add-member-desktop {
+  display: none;
+
+  @include respond-to(tablet) {
+    display: inline-block;
+  }
+}
+
+.project-team__add-member-mobile {
+  display: inline-block;
+
+  @include respond-to(tablet) {
+    display: none;
+  }
+}

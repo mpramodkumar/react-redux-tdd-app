@@ -1,0 +1,33 @@
+@import 'mixins';
+@import 'variables';
+
+.project-page__webhook-dialog .md-dialog {
+  width: initial;
+  overflow: auto;
+}
+
+.project-webhooks__text-circle-ci-instructions {
+  padding: 12px 0;
+  width: 100%;
+}
+
+.repo-url-container {
+  font-weight: bold;
+  padding-bottom: 12px;
+
+  &.empty {
+    background: $gray-row;
+    border: 1px solid $light-gray;
+    border-radius: 4px;
+    font-weight: normal;
+    padding: 12px 24px;
+  }
+}
+
+.repo-url {
+  background: $gray-row;
+  border: 1px solid $light-gray;
+  border-radius: 4px;
+  overflow: auto;
+  padding: 0 6px;
+}

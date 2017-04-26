@@ -1,0 +1,39 @@
+@import 'variables';
+@import 'mixins';
+
+.process-survey__results {
+  padding: 12px;
+
+  @include respond-to(tablet) {
+    padding: 28px;
+  }
+}
+
+.process-survey__new-link {
+  color: $orange;
+  font-family: $bold;
+  text-transform: uppercase;
+}
+
+.process-survey__completed {
+  color: $medium-gray;
+  font-family: $italic;
+
+  a {
+    @extend .process-survey__completed;
+    text-decoration: underline;
+  }
+}
+
+
+.process-survey__results-data {
+  margin: 60px 0 0;
+}
+
+.process-survey__category-title {
+  color: $dark-gray;
+  font-family: $bold;
+  margin: 0;
+  padding: 0 0 0 10px;
+  text-transform: uppercase;
+}

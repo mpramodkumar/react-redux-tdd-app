@@ -48,8 +48,13 @@ class Measure extends Component {
         locationId: true
       }
     };
+    alert('constructor web hook');
   }
 
+  componentWillMount() {
+    alert('componentWillMount web hook');
+  }
+  
   componentDidMount() {
     this.props.dispatch(fetchLocations());
   }
